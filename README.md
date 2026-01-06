@@ -58,7 +58,8 @@ productbay/
 │   ├── css/                    # Compiled Tailwind CSS
 │   ├── js/                     # Compiled React & Frontend JS bundles
 ├── src/                        # Source Code (The "Face")
-│   ├── components/             # Reusable React Components (Buttons, Modals, Inputs)
+│   ├── components/             # Reusable React Components
+│   │   ├── ui/                 # Reusable UI Primitives (Buttons, Modals, Inputs)
 │   ├── layouts/                # Admin Layouts (Sidebar, Header wrappers)
 │   ├── pages/                  # Main Admin Views (Dashboard, Table Editor, Settings)
 │   ├── store/                  # React Context & State Management
@@ -139,5 +140,4 @@ When reporting an issue, please provide:
 
 ProductBay is licensed under the [GPL v2.0 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
-**Author:** Forhad Khan  
-**Website:** [forhadakhan.com](https://forhadakhan.com)
+**Copyright:** [WPAnchorBay](https://wpanchorbay.com/) 
