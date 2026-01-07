@@ -84,3 +84,24 @@ This approach is fully compliant with the WordPress Plugin Review Team's guideli
 -   **Our Implementation**: By namespacing all our CSS under the unique ID `#productbay-root`, we satisfy the requirement for uniqueness and conflict prevention essentially "prefixing" every rule at the selector level.
 
 This strategy offers the best of both worlds: a modern, utility-first developer experience and a polite, isolated footprint within the WordPress ecosystem.
+
+## 🐘 PHP Naming Conventions & Best Practices
+
+To avoid conflicts with other plugins and WordPress core, we adhere to the following strict naming conventions.
+
+### 1. Classes: Use Namespaces (Not Prefixes)
+We follow **PSR-4** autoloading standards.
+-   **Bad (Old Way)**: `class ProductBay_Admin_Menu { ... }`
+-   **Good (Our Way)**: `namespace ProductBay\Admin; class Menu { ... }`
+
+**Why?** Namespaces provide cleaner code, better organization, and improved autoloading support via Composer or our custom SPL autoloader. It naturally isolates our code from the global class scope.
+
+### 2. Global Constants
+All global constants **must** be prefixed with `PRODUCTBAY_`.
+-   **Example**: `PRODUCTBAY_VERSION`, `PRODUCTBAY_PATH`.
+
+### 3. Global Functions
+Avoid global functions whenever possible.
+-   If necessary (e.g., for template tags), prefix with `productbay_`.
+-   Prefer static methods in namespaced classes: `ProductBay\Utils\Helper::do_something()`.
+

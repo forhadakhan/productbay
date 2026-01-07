@@ -1,5 +1,5 @@
 <?php
-namespace App\Http;
+namespace ProductBay\Http;
 
 class Request {
     //
