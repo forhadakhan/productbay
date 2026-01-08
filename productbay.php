@@ -3,7 +3,9 @@
  * Plugin Name: ProductBay
  * Description: Advanced WooCommerce Product Tables with React Admin.
  * Version: 1.0.0
- * Author: Forhad Khan
+ * Plugin URI: https://wpanchorbay.com/
+ * Author: WPAnchorBay
+ * Author URI: https://wpanchorbay.com/
  * Text Domain: productbay
  * Domain Path: /languages
  */
@@ -18,23 +20,8 @@ define( 'PRODUCTBAY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'PRODUCTBAY_URL', plugin_dir_url( __FILE__ ) );
 
 
-// Autoloader (PSR-4 implementation)
-spl_autoload_register(function ($class) {
-    $prefix = 'ProductBay\\';
-    $base_dir = PRODUCTBAY_PATH . 'app/';
-
-    $len = strlen($prefix);
-    if (strncmp($prefix, $class, $len) !== 0) {
-        return;
-    }
-
-    $relative_class = substr($class, $len);
-    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
-
-    if (file_exists($file)) {
-        require $file;
-    }
-});
+// Autoloader (Composer)
+require_once __DIR__ . '/vendor/autoload.php';
 
 // Boot Plugin
 function run_productbay() {

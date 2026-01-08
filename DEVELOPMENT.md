@@ -105,3 +105,25 @@ Avoid global functions whenever possible.
 -   If necessary (e.g., for template tags), prefix with `productbay_`.
 -   Prefer static methods in namespaced classes: `ProductBay\Utils\Helper::do_something()`.
 
+## 🛠️ Tooling & Linting
+
+We use modern tooling to ensure code quality.
+
+### Autoloading
+We use **Composer** for PSR-4 autoloading.
+-   Run `composer install` to verify dependencies.
+-   Namespace root: `ProductBay\` -> `app/`.
+
+### Linting Commands
+Run these commands to verify your code:
+-   **PHP**: `npm run lint:php` (or `composer run-script lint` if defined) - Checks WordPress Coding Standards.
+-   **JS/TS**: `npm run lint:js` - Checks eslint rules.
+-   **CSS**: `npm run lint:css` - Checks stylelint rules.
+
+### Versioning & Metadata
+Always keep metadata consistent across:
+1.  `productbay.php` (Plugin Header)
+2.  `composer.json`
+3.  `package.json`
+
+

@@ -2,7 +2,18 @@
   "name": "productbay",
   "version": "1.0.0",
   "description": "Easily build custom WooCommerce product listings with search, filters, and pagination for smooth browsing and better conversions.",
-  "author": "Forhad Khan (GitHub: forhadakhan, Website: https://forhadakhan.com)",
+  "author": "WPAnchorBay <support@wpanchorbay.com> (https://wpanchorbay.com/)",
+  "contributors": [
+    {
+      "name": "Forhad Khan",
+      "email": "dev@forhadakhan.com",
+      "url": "https://forhadakhan.com/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forhadakhan/productbay.git"
+  },
   "license": "GPL-2.0-or-later",
   "main": "src/index.tsx",
   "bugs": {
@@ -26,6 +37,7 @@
     "lint:js": "wp-scripts lint-js",
     "lint:md:docs": "wp-scripts lint-md-docs",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "lint:php": "vendor\\bin\\phpcs",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip"
   },
